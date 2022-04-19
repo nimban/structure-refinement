@@ -1,0 +1,1 @@
+{"train_fape": [0.7977286969405862, 0.7885518242427715, 0.7861792844493297], "train_drmsd": [NaN, NaN, NaN], "val_fape": [0.774666397545216, 0.7730593914442221, 0.7705143686169426], "val_drmsd": [NaN, NaN, NaN], "train_fape_epoch": [], "train_drmsd_epoch": [], "val_drmsd_epoch": []}

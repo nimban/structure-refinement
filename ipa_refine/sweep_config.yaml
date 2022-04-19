@@ -1,0 +1,23 @@
+command:
+  - /home/nn122/openfold/lib/conda/envs/openfold_venv/bin/python3
+  - -u
+  - /home/nn122/remote_runtime/newfold/ipa_refine/run_tuning_ipa_refine.py
+project: ipa_refine_tune
+name: sweep_test
+method: random
+metric:
+  goal: minimize
+  name: val_loss
+parameters:
+  learning_rate:
+    values: [1e-2, 1e-3, 1e-4]
+  trans_scale_factor:
+    distribution: uniform
+    min: 0.1
+    max: 2
+  c_ipa:
+    values: [16, 32, 64, 128]
+  no_blocks:
+    values: [4, 8, 12]
+  dropout_rate:
+    values: [0.05, 0.1]

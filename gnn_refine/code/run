@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -ex
+
+# This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
+mkdir -p /results/CASP13/
+DGLBACKEND=pytorch python -u GNNRefine.py ../data/StartingModels/CASP13/ ../results/CASP13/ -n_proc=12"$@"
+
+mkdir -p /results/CASP14/
+DGLBACKEND=pytorch python -u GNNRefine.py ../data/StartingModels/CASP14/ ../results/CASP14/ -n_proc=12"$@"
